@@ -65,7 +65,7 @@ ssh_dir="${part1}/root/.ssh"
 cp ./authorized_keys $ssh_dir
 
 echo "Copy to second partition"
-cp -r $sshd_file "${part2}/etc/ssh/sshd_config"
+cp $sshd_file "${part2}/etc/ssh/sshd_config"
 cp -r $ssh_dir "${part2}/root/"
 
 printBanner "\nProcess complete! Login with ssh root@[host] -p 3600"
